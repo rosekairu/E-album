@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse,Http404
 from .models import Image,Category,Location
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 def index(request):
@@ -8,7 +9,7 @@ def index(request):
   View function that renders the index page
   """
   photos = Image.get_all_images()
-  return render(request,'index.html',{"photos":photos})
+  return render(request,'album/index.html',{"photos":photos})
 
 def image(request,image_id):
     try:
