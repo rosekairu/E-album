@@ -2,7 +2,7 @@ from django.db import models
 import datetime as dt
 
 
-
+# category and location.
 class Category(models.Model):
     name = models.CharField(max_length=50)
 
@@ -27,23 +27,17 @@ class Location(models.Model):
     def delete_location(self):
         self.delete()
 
+
+
 # Create your models here.
 class Image(models.Model):
     image = models.ImageField(upload_to='images/')
     name = models.CharField(max_length=40)
     description = models.TextField()
-    category = models.ForeignKey(Category)
-    location = models.ForeignKey(Location)
+    category = models.ForeignKey(Category, on_delete = models.CASCADE,)
+    location = models.ForeignKey(Location, on_delete = models.CASCADE,)
 
-    def __str__(self):
-        return self.name
-
-    def save_image(self):
-        self.save()
-
-    def delete_image(self):
-        self.delete()
-
+    
     @classmethod
     def get_all_images(cls):
         images = cls.objects.order_by()
@@ -64,9 +58,17 @@ class Image(models.Model):
         images = cls.objects.filter(location_id=id)
         return images
 
-
     @classmethod
     def search_image(cls, category):
         images = cls.objects.filter(category__name__icontains=category)
         return images
-# Create your models here.
+
+    def __str__(self):
+        return self.name
+
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()
+
