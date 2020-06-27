@@ -2,7 +2,7 @@
 <link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps+Lora" rel="stylesheet">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar">
-    <a class="navbar-brand head" href="/" id="album"><img src="/static/photos/logo.jpeg" class="img-responsive" style="width:50px;height: 50px;">&nbsp;<b>E-album</b></a>
+    <a class="navbar-brand head" href="/" id="album"><img src="/static/photos/logo.jpeg" class="img-responsive" style="width:120px;height: 60px;">&nbsp;<b style="color: yellowgreen;">E-album</b></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,18 +11,16 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown dropdown">
                 <a class="nav-link dropdown-toggle locations" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#ece3d1;">
-          Locations&nbsp;<i class="fas fa-map-marker-alt"></i> &nbsp; &nbsp;
+          Locations&nbsp;<i class="fas fa-map-marker-alt"></i> 
         </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background:rgb(32, 32, 32)">
                     <a class="dropdown-item" href="/location/3">Nairobi</a>
-                    <a class="dropdown-item" href="/location/4">Mombasa</a>
                     <a class="dropdown-item" href="/location/1">London</a>
-                    <a class="dropdown-item" href="/location/2">New York</a>
-                    <a class="dropdown-item" href="/location/5">Sydney</a>
-                    <a class="dropdown-item" href="/location/6">Paris</a>
+                    <a class="dropdown-item" href="/location/2">Sydney</a>
+                    <a class="dropdown-item" href="/location/4">Paris</a>
 
                 </div>
-            </li>
+            </li>&nbsp; &nbsp;
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle categories" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#ece3d1;">
           Categories
@@ -47,7 +45,8 @@
         z-index: 1;
     }
     
-    #gallery {
+    #album {
+        font-family: 'Oleo Script Swash Caps', cursive;
         font-size: 30px;
     }
     
