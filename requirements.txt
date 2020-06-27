@@ -4,9 +4,11 @@ beautifulsoup4==4.9.1
 bootstrap4==0.1.0
 certifi==2020.6.20
 cloudinary==1.21.1
+dj-database-url==0.5.0
 Django==3.0.7
 django-bootstrap3==14.0.0
 django-bootstrap4==2.1.1
+django-heroku==0.3.1
 importlib-metadata==1.6.1
 isort==4.3.21
 lazy-object-proxy==1.4.3
@@ -21,5 +23,6 @@ sqlparse==0.3.1
 toml==0.10.1
 typed-ast==1.4.1
 urllib3==1.25.9
+whitenoise==5.1.0
 wrapt==1.12.1
 zipp==3.1.0
