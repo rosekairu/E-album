@@ -39,6 +39,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
+    'cloudinary',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,12 +53,13 @@ INSTALLED_APPS = [
     'bootstrap4',
 ]
 
-
-cloudinary.config( 
-  cloud_name = "horegjdce", 
-  api_key = "949164423565195", 
-  api_secret = "Eku4CJzu1yM12MYPvJ-Szt6o7nE" 
-)
+# Cloudinary config - You need to create a free claudinary account.
+CLOUDINARY = {
+    'cloud_name': os.getenv('CLOUD_NAME'),
+    'api_key': os.getenv('API_KEY'),
+    'api_secret': os.getenv('CLOUD_API_SECRET'),
+    'secure': True
+}
 
 
 MIDDLEWARE = [
