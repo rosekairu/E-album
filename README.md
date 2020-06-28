@@ -76,7 +76,9 @@ To get the code...
 ## USER INTERACTION
 
 1. To run the application, type python manage.py runserver (if cloned the repo)
+```
 or
+```
 2. Click on the provided link
 3. The homepage will then be displayed
 4. Browse through the photos
@@ -89,12 +91,12 @@ No known bugs
 
 ### Technologies Used
 
-Python3.6
-Django3
-Postgres
-Bootstrap
-HTML
-CSS
+1. Python3.6
+2. Django3
+3. Postgres
+4. Bootstrap
+5. HTML
+6. CSS
 
 ### Support and contact details
 
