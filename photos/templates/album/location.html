@@ -18,6 +18,7 @@
                     <div class="modal-content" style="font-family: 'Lora', serif;background: rgb(29, 29, 29);color:#d6d3cd;">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalCenterTitle" style="font-size:40px;;"><b>{{image.name}}</b></h5>
+                            <!--p>Posted: {{photo.pub_date|timesince}} ago</p-->
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -63,7 +64,7 @@
         </script>
         {% empty %}
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h2 class="text-center">No images to show</h2>
+            <h2 class="text-center" style="color: yellowgreen;">No images to show</h2>
         </div>
         {% endfor %}
     </div>

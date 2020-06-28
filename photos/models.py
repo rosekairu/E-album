@@ -1,3 +1,4 @@
+import datetime as dt
 from django.db import models
 from cloudinary.models import CloudinaryField
 
@@ -37,6 +38,9 @@ class Image(models.Model):
     description = models.TextField()
     category = models.ForeignKey(Category, on_delete = models.CASCADE,)
     location = models.ForeignKey(Location, on_delete = models.CASCADE,)
+    
+    class Meta:
+        ordering = ['name']
 
     
     @classmethod
