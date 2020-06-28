@@ -12,26 +12,13 @@ def index(request):
   photos = Image.get_all_images()
   return render(request,'album/index.html',{"photos":photos})
 
+
 def image(request,image_id):
     try:
         image = Image.objects.get(id = image_id)
     except DoesNotExist:
         raise Http404()
-    return render(request,"search.html", {"image":image})
-
-
-def add_image(request):
-    if request.method == "POST":
-        form = ImageForm(request.POST, request.FILES)
-        if form.is_valid():
-            image = Image()
-            image.name = request.POST.get('name')
-            image.save()
-            return redirect('/image/' + image.id)
-    else:
-        form = ImageForm()
-
-    return render(request, 'add-image.html', {'form': form})
+    return render(request,"album/search.html", {"image":image})
 
 
 def search_image(request):
@@ -42,10 +29,10 @@ def search_image(request):
         message = f"{category}"
 
         return render(request, 'search.html',{"message":message,"images": searched_images})
-
     else:
         message = ".You haven't searched for any category"
         return render(request, 'search.html',{"message":message})
+
 
 def filter_by_location(request,location_id):
     '''
