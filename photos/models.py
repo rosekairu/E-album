@@ -1,5 +1,10 @@
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from django.db import models
 import datetime as dt
+
+from cloudinary.models import CloudinaryField
 
 
 # category and location.
@@ -32,7 +37,8 @@ class Location(models.Model):
 # Create your models here.
 class Image(models.Model):
     image = models.ImageField(upload_to='images/')
-    name = models.CharField(max_length=40)
+    #image = CloudinaryField('image')
+    name = models.CharField(max_length=50)
     description = models.TextField()
     category = models.ForeignKey(Category, on_delete = models.CASCADE,)
     location = models.ForeignKey(Location, on_delete = models.CASCADE,)
@@ -71,4 +77,5 @@ class Image(models.Model):
 
     def delete_image(self):
         self.delete()
+    
 
