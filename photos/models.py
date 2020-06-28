@@ -1,9 +1,4 @@
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
 from django.db import models
-import datetime as dt
-
 from cloudinary.models import CloudinaryField
 
 
