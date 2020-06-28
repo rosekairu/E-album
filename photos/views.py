@@ -28,10 +28,10 @@ def search_image(request):
         searched_images = Image.search_image(category)
         message = f"{category}"
 
-        return render(request, 'search.html',{"message":message,"images": searched_images})
+        return render(request, 'album/search.html',{"message":message,"images": searched_images})
     else:
         message = ".You haven't searched for any category"
-        return render(request, 'search.html',{"message":message})
+        return render(request, 'album/search.html',{"message":message})
 
 
 def filter_by_location(request,location_id):
