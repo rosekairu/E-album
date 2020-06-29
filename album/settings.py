@@ -163,9 +163,9 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Cloudinary config - You need to create a free claudinary account.
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'horegjdce',
-    'API_KEY': '949164423565195',
-    'API_SECRET': 'Eku4CJzu1yM12MYPvJ-Szt6o7nE',
+    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': config('CLOUDINARY_API_KEY'),
+    'API_SECRET': config('CLOUDINARY_API_SECRET'),
     'secure': True
 }
 

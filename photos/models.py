@@ -16,6 +16,10 @@ class Category(models.Model):
     def delete_category(self):
         self.delete()
 
+    @classmethod
+    def update_category(cls, id, value):
+        cls.objects.filter(id=id).update(name=value)
+
 class Location(models.Model):
     name = models.CharField(max_length=50)
 
@@ -28,7 +32,9 @@ class Location(models.Model):
     def delete_location(self):
         self.delete()
 
-
+    @classmethod
+    def update_location(cls, id, value):
+        cls.objects.filter(id=id).update(name=value)
 
 # Create your models here.
 class Image(models.Model):
@@ -39,8 +45,6 @@ class Image(models.Model):
     category = models.ForeignKey(Category, on_delete = models.DO_NOTHING,)
     location = models.ForeignKey(Location, on_delete = models.DO_NOTHING,)
     
-    
-
     
     @classmethod
     def get_all_images(cls):

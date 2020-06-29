@@ -8,7 +8,8 @@ class LocationTestClass(TestCase):
     '''
     #Set up method
     def setUp(self):
-        self.location = Location(name='Spain')
+        self.location = Location(name='Paris')
+    
     #Testing instance
     def test_instance(self):
         self.assertTrue(isinstance(self.location, Location))
@@ -21,12 +22,14 @@ class LocationTestClass(TestCase):
         locations = Location.objects.all()
         self.assertTrue(len(locations) > 0)
 
+
     def test_delete_method(self):
         '''
         Function that tests whether a location can be deleted
         '''
         self.location.save_location()
         self.location.delete_location()
+        
 
 
 class CategoryTestClass(TestCase):
@@ -35,7 +38,8 @@ class CategoryTestClass(TestCase):
     '''
     #Set up method
     def setUp(self):
-        self.category = Category(name='Sports')
+        self.category = Category(name='Tech')
+    
     #Testing instance
     def test_instance(self):
         self.assertTrue(isinstance(self.category, Category))
