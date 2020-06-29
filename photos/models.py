@@ -39,8 +39,7 @@ class Image(models.Model):
     category = models.ForeignKey(Category, on_delete = models.CASCADE,)
     location = models.ForeignKey(Location, on_delete = models.CASCADE,)
     
-    class Meta:
-        ordering = ['name']
+    
 
     
     @classmethod
