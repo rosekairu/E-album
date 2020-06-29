@@ -55,13 +55,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'album.urls'
@@ -168,7 +169,6 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': 'Eku4CJzu1yM12MYPvJ-Szt6o7nE',
     'secure': True
 }
-
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
