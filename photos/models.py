@@ -36,8 +36,8 @@ class Image(models.Model):
     #image = CloudinaryField('image')
     name = models.CharField(max_length=50)
     description = models.TextField()
-    category = models.ForeignKey(Category, on_delete = models.CASCADE,)
-    location = models.ForeignKey(Location, on_delete = models.CASCADE,)
+    category = models.ForeignKey(Category, on_delete = models.DO_NOTHING,)
+    location = models.ForeignKey(Location, on_delete = models.DO_NOTHING,)
     
     
 
