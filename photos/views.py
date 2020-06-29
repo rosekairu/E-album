@@ -1,7 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse,Http404
 from .models import Image,Category,Location
-from .forms import ImageForm
 from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
