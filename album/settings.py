@@ -44,21 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'photos',
     'bootstrap3',
     'cloudinary',
     'bootstrap4',
 ]
-
-# Cloudinary config - You need to create a free claudinary account.
-CLOUDINARY = {
-    'cloud_name': os.getenv('CLOUD_NAME'),
-    'api_key': os.getenv('API_KEY'),
-    'api_secret': os.getenv('CLOUD_API_SECRET'),
-    'secure': True
-}
 
 
 MIDDLEWARE = [
@@ -164,9 +156,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
@@ -175,9 +165,19 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # configuring the location for media
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+##MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-#DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+# Cloudinary config - You need to create a free claudinary account.
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'horegjdce',
+    'API_KEY': '949164423565195',
+    'API_SECRET': 'Eku4CJzu1yM12MYPvJ-Szt6o7nE',
+    'secure': True
+}
+
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
