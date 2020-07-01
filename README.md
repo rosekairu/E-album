@@ -1,5 +1,7 @@
 # E-album
 
+[![codebeat badge](https://codebeat.co/badges/ad041547-9b52-4318-8af2-57cb39ae56ee)](https://codebeat.co/projects/github-com-rosekairu-e-album-master)
+
 ### Author: [rosekairu](https://github.com/rosekairu)
 
 ### Description
